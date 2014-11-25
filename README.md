@@ -6,6 +6,17 @@
 
 The Listen gem listens to file modifications and notifies you about the changes.
 
+## KNOWN SYMLINK ISSUE WITH 2.8.x
+
+If you have symlinks in your project, consider using 2.7.x in your Gemfile:
+
+```
+# Use this if you run into symlink issues with listen 2.8.x
+gem "listen", "~> 2.7"
+```
+
+Note that 2.7.x will run slower if you have symlinks in your project.
+
 ## IMPORTANT NOTE
 
 Got an issue with Listen and you're "in a hurry"? First, try Polling mode as a workaround (described below).
